@@ -1,0 +1,30 @@
+ useEffect(()=>{
+        const fetchEvery = async()=>{
+        setIsLoading(true)
+        try {
+        await Promise.all([fetchData(),fetchWeather(),image()])
+        
+        } catch (error) {
+            console.log(error)
+        }finally{
+            setIsLoading(false)
+        }
+    };
+    fetchEvery();
+    },[]);
+
+useEffect(()=>{
+        const fetchAll = async()=>{
+            setIsLoading(true)
+            try {
+                fetchData();
+                fetchWeather();
+                image()
+            } catch (error) {
+                console.log(error)
+            }finally{
+                setIsLoading(false)
+            }
+        }        
+        fetchAll()
+    },[isLoading])

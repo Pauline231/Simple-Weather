@@ -6,6 +6,8 @@
     .then(response => response.json())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));*/
+
+//This was used before but not in the latest commit
   
 const apikey = 'c40e45af954c4f84a05c6e6c555986c1'
 const url = "https://api.open-meteo.com/v1/forecast"
@@ -53,6 +55,7 @@ export const weatherForcast = async(Params)=>{
             relativeHumidity2m: current?.variables(0).value(),
             apparentTemperature: current?.variables(1).value(),
             rain: current?.variables(2).value(),
+            isDay: current?.variables(2).value(),
             windGusts10m: current?.variables(3).value(),
             cloudCover: current?.variables(3).value(),
         },

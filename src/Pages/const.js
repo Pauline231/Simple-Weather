@@ -6,6 +6,12 @@ export const imgSrcs = {
  sunnysrc : "https://img.icons8.com/material-rounded/24/sun--v1.png" ,
  windsrc : "https://img.icons8.com/ios/50/wind--v1.png",
  watersrc : "https://img.icons8.com/ios/50/water.png",
- umbresrc : "https://img.icons8.com/ios-filled/50/umbrella.png"
+ umbresrc : "https://img.icons8.com/ios-filled/50/umbrella.png",
+ nightsrc : "https://img.icons8.com/ios-filled/50/partly-cloudy-night--v1.png" 
 }
 
+export const STATUS = {
+    SUCCESS : 'success',
+    LOADING : 'loading',
+    ERROR : 'error'
+}

@@ -2,21 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import { QueryClientProvider, QueryClient } from 'react-query'
+import {store} from './app/store'
+import { Provider } from 'react-redux'
 
-
-const queryClient = new QueryClient({
-  defaultOptions:{
-    queries: {
-      retry: 0
-    }
-  }
-})
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <QueryClientProvider client={queryClient}>
+    <Provider store={store}>
     <App />
-    </QueryClientProvider>
+  </Provider>
   </React.StrictMode>,
 )
